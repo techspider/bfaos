@@ -15,5 +15,10 @@ namespace BFAOSTool.ContentPanels
         {
             InitializeComponent();
         }
+
+        private void MainCP_Load(object sender, EventArgs e)
+        {
+            cdriveLabel.Text = cdriveLabel.Text.Replace("${drive}", BFAOSInstance.Drive);
+        }
     }
 }

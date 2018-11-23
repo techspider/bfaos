@@ -99,6 +99,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="BFAOS-App-Icon.ico" />
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BFAOSToolCore\BFAOSToolCore.csproj">
