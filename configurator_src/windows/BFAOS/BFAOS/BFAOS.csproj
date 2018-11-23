@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContentPanels\DevInfoCP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContentPanels\DevInfoCP.Designer.cs">
+      <DependentUpon>DevInfoCP.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContentPanels\MainCP.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="UIControls\MenuItemWa.Designer.cs">
       <DependentUpon>MenuItemWa.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ContentPanels\DevInfoCP.resx">
+      <DependentUpon>DevInfoCP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ContentPanels\MainCP.resx">
       <DependentUpon>MainCP.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +117,8 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="BFAOS-App-Icon.ico" />
+    <None Include="Resources\baseline_arrow_back_white_24dp.png" />
+    <None Include="Resources\baseline_arrow_back_white_36dp.png" />
     <None Include="Resources\baseline_info_white_36dp.png" />
     <None Include="Resources\logo.png" />
   </ItemGroup>

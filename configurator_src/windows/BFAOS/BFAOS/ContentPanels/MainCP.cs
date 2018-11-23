@@ -20,5 +20,15 @@ namespace BFAOSTool.ContentPanels
         {
             cdriveLabel.Text = cdriveLabel.Text.Replace("${drive}", BFAOSInstance.Drive);
         }
+
+        private void viewDevInfoBtn_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewDevInfoBtn_Click(object sender, EventArgs e)
+        {
+            BFAOSInstance.MUI_Instance.ShowContentPanel<DevInfoCP>();
+        }
     }
 }

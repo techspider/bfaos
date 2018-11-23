@@ -79,6 +79,8 @@
             this.viewDevInfoBtn.Name = "viewDevInfoBtn";
             this.viewDevInfoBtn.Size = new System.Drawing.Size(332, 36);
             this.viewDevInfoBtn.TabIndex = 0;
+            this.viewDevInfoBtn.Click += new System.EventHandler(this.viewDevInfoBtn_Click);
+            this.viewDevInfoBtn.Load += new System.EventHandler(this.viewDevInfoBtn_Load);
             // 
             // MainCP
             // 
