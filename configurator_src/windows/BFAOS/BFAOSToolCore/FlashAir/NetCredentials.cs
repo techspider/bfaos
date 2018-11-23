@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BFAOSToolCore.FlashAir
 {
-    public struct NetCredentials
+    public class NetCredentials
     {
         public string SSID { get; set; }
         public string KEY { get; set; }

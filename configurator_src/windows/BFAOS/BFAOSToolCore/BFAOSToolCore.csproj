@@ -41,9 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfigParser.cs" />
+    <Compile Include="FlashAir\AuthCreds.cs" />
+    <Compile Include="FlashAir\NetCredentials.cs" />
+    <Compile Include="Util\ConfigParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\BFAOSColorScheme.cs" />
+    <Compile Include="FlashAir\FlashAirConfig.cs" />
+    <Compile Include="Util\Convert.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,6 +5,7 @@ Copyright (C) mr_chainman (techspider) 2018.
 https://github.com/techspider/bfaos
 */
 
+using BFAOSTool.ContentPanels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,7 @@ namespace BFAOSTool
 
         private void MainUI_Load(object sender, EventArgs e)
         {
+            ShowContentPanel<MainCP>();
             
         }
 

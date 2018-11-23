@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BFAOSToolCore.FlashAir
 {
-    public struct AuthCreds
+    public class AuthCreds
     {
         public string Username { get; set; }
         public string Password { get; set; }
