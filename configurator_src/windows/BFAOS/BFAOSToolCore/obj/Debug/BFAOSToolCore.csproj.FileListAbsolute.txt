@@ -1,0 +1,6 @@
+C:\bfaos\bfaos_flashair\configurator_src\windows\BFAOS\BFAOSToolCore\obj\Debug\BFAOSToolCore.csprojAssemblyReference.cache
+C:\bfaos\bfaos_flashair\configurator_src\windows\BFAOS\BFAOSToolCore\obj\Debug\BFAOSToolCore.csproj.CoreCompileInputs.cache
+C:\bfaos\bfaos_flashair\configurator_src\windows\BFAOS\BFAOSToolCore\bin\Debug\BFAOSToolCore.dll
+C:\bfaos\bfaos_flashair\configurator_src\windows\BFAOS\BFAOSToolCore\bin\Debug\BFAOSToolCore.pdb
+C:\bfaos\bfaos_flashair\configurator_src\windows\BFAOS\BFAOSToolCore\obj\Debug\BFAOSToolCore.dll
+C:\bfaos\bfaos_flashair\configurator_src\windows\BFAOS\BFAOSToolCore\obj\Debug\BFAOSToolCore.pdb

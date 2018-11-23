@@ -16,7 +16,7 @@ namespace BFAOSToolCore
     {
         public static Dictionary<string, string> ParseConfig(string path)
         {
-
+            return null;
         }
     }
 }

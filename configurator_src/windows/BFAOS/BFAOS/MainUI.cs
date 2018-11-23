@@ -23,14 +23,17 @@ namespace BFAOSTool
             InitializeComponent();
         }
 
-        public void ShowContentPanel()
+        public void ShowContentPanel<T>()
         {
-            
+            var panel = Activator.CreateInstance(typeof(T)) as Control;
+            contentPanel.Controls.Clear();
+            panel.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(panel);
         }
 
         private void MainUI_Load(object sender, EventArgs e)
         {
-            this.Icon = SystemIcons.Application;
+            
         }
 
         private void contentPanel_Paint(object sender, PaintEventArgs e)
