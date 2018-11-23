@@ -67,6 +67,12 @@
     </Compile>
     <Compile Include="BFAOSInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIControls\MenuItemWa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControls\MenuItemWa.Designer.cs">
+      <DependentUpon>MenuItemWa.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ContentPanels\MainCP.resx">
       <DependentUpon>MainCP.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +92,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UIControls\MenuItemWa.resx">
+      <DependentUpon>MenuItemWa.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,6 +108,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="BFAOS-App-Icon.ico" />
+    <None Include="Resources\baseline_info_white_36dp.png" />
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>

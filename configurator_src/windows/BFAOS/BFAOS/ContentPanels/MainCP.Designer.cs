@@ -28,21 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mainLogo = new System.Windows.Forms.PictureBox();
             this.cdriveLabel = new System.Windows.Forms.Label();
             this.activityList = new System.Windows.Forms.Panel();
+            this.mainLogo = new System.Windows.Forms.PictureBox();
+            this.viewDevInfoBtn = new BFAOSTool.UIControls.MenuItemWa();
+            this.activityList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // mainLogo
-            // 
-            this.mainLogo.Image = global::BFAOSTool.Properties.Resources.logo;
-            this.mainLogo.Location = new System.Drawing.Point(32, 32);
-            this.mainLogo.Name = "mainLogo";
-            this.mainLogo.Size = new System.Drawing.Size(256, 100);
-            this.mainLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.mainLogo.TabIndex = 0;
-            this.mainLogo.TabStop = false;
             // 
             // cdriveLabel
             // 
@@ -61,10 +53,32 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.activityList.AutoScroll = true;
+            this.activityList.Controls.Add(this.viewDevInfoBtn);
             this.activityList.Location = new System.Drawing.Point(336, 32);
             this.activityList.Name = "activityList";
             this.activityList.Size = new System.Drawing.Size(332, 492);
             this.activityList.TabIndex = 2;
+            // 
+            // mainLogo
+            // 
+            this.mainLogo.Image = global::BFAOSTool.Properties.Resources.logo;
+            this.mainLogo.Location = new System.Drawing.Point(32, 32);
+            this.mainLogo.Name = "mainLogo";
+            this.mainLogo.Size = new System.Drawing.Size(256, 100);
+            this.mainLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.mainLogo.TabIndex = 0;
+            this.mainLogo.TabStop = false;
+            // 
+            // viewDevInfoBtn
+            // 
+            this.viewDevInfoBtn.BackColor = System.Drawing.Color.Transparent;
+            this.viewDevInfoBtn.BtnText = "View Device Info";
+            this.viewDevInfoBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.viewDevInfoBtn.Icon = global::BFAOSTool.Properties.Resources.baseline_info_white_36dp;
+            this.viewDevInfoBtn.Location = new System.Drawing.Point(0, 0);
+            this.viewDevInfoBtn.Name = "viewDevInfoBtn";
+            this.viewDevInfoBtn.Size = new System.Drawing.Size(332, 36);
+            this.viewDevInfoBtn.TabIndex = 0;
             // 
             // MainCP
             // 
@@ -77,6 +91,7 @@
             this.Name = "MainCP";
             this.Size = new System.Drawing.Size(720, 576);
             this.Load += new System.EventHandler(this.MainCP_Load);
+            this.activityList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mainLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -88,5 +103,6 @@
         private System.Windows.Forms.PictureBox mainLogo;
         private System.Windows.Forms.Label cdriveLabel;
         private System.Windows.Forms.Panel activityList;
+        private UIControls.MenuItemWa viewDevInfoBtn;
     }
 }
