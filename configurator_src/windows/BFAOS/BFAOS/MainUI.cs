@@ -35,7 +35,6 @@ namespace BFAOSTool
         private void MainUI_Load(object sender, EventArgs e)
         {
             ShowContentPanel<MainCP>();
-            
         }
 
         private void contentPanel_Paint(object sender, PaintEventArgs e)

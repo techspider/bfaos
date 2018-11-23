@@ -53,6 +53,12 @@
     <Compile Include="ContentPanels\MainCP.Designer.cs">
       <DependentUpon>MainCP.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeviceBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceBrowser.Designer.cs">
+      <DependentUpon>DeviceBrowser.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ContentPanels\MainCP.resx">
       <DependentUpon>MainCP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceBrowser.resx">
+      <DependentUpon>DeviceBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainUI.resx">
       <DependentUpon>MainUI.cs</DependentUpon>
