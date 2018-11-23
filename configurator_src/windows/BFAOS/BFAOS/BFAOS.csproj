@@ -59,6 +59,12 @@
     <Compile Include="ContentPanels\MainCP.Designer.cs">
       <DependentUpon>MainCP.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContentPanels\NetworkSettingsCP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContentPanels\NetworkSettingsCP.Designer.cs">
+      <DependentUpon>NetworkSettingsCP.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeviceBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ContentPanels\MainCP.resx">
       <DependentUpon>MainCP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPanels\NetworkSettingsCP.resx">
+      <DependentUpon>NetworkSettingsCP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeviceBrowser.resx">
       <DependentUpon>DeviceBrowser.cs</DependentUpon>
@@ -117,6 +126,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="BFAOS-App-Icon.ico" />
+    <None Include="Resources\baseline_network_wifi_white_36dp.png" />
     <None Include="Resources\baseline_arrow_back_white_24dp.png" />
     <None Include="Resources\baseline_arrow_back_white_36dp.png" />
     <None Include="Resources\baseline_info_white_36dp.png" />

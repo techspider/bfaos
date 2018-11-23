@@ -30,5 +30,15 @@ namespace BFAOSTool.ContentPanels
         {
             BFAOSInstance.MUI_Instance.ShowContentPanel<DevInfoCP>();
         }
+
+        private void networkSettingsBtn_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void networkSettingsBtn_Click(object sender, EventArgs e)
+        {
+            BFAOSInstance.MUI_Instance.ShowContentPanel<NetworkSettingsCP>();
+        }
     }
 }

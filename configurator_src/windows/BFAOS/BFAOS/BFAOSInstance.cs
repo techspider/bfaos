@@ -33,6 +33,11 @@ namespace BFAOSTool
                 if ((drive.DriveType == DriveType.Removable) && File.Exists(drive.Name + "\\SD_WLAN\\CONFIG"))
                     Drive = drive.Name;
             }
+            if(Drive == null)
+            {
+                MessageBox.Show("No valid FlashAir devices were found.\n\nPress OK to quit.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             DriveConfig = ConfigParser.ParseConfig(Drive + "\\SD_WLAN\\CONFIG");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

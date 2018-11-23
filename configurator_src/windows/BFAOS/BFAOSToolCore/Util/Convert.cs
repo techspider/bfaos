@@ -11,5 +11,9 @@ namespace BFAOSToolCore.Util
         {
             return input == 1 ? true : false;
         }
+        public static int BoolToInt(bool b)
+        {
+            return b ? 1 : 0;
+        }
     }
 }

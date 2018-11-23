@@ -53,6 +53,9 @@ namespace BFAOSToolCore.Util
             cfg.Vendor = kvp.ContainsKey("VENDOR") ? kvp["VENDOR"] : "TOSHIBA";
             cfg.WLANAPMode = kvp.ContainsKey("WLANAPMODE") ? int.Parse(kvp["WLANAPMODE"]) : -1;
             cfg.DNSMode = kvp.ContainsKey("DNSMODE") ? int.Parse(kvp["DNSMODE"]) : 1;
+            cfg.WebDav = kvp.ContainsKey("WEBDAV") ? Util.Convert.IntToBool(int.Parse(kvp["WEBDAV"])) : false;
+            cfg.AppAutotime = kvp.ContainsKey("APPAUTOTIME") ? int.Parse(kvp["APPAUTOTIME"]) : 300000;
+            cfg.CID = kvp.ContainsKey("CID") ? kvp["CID"] : null;
             return cfg;
         }
     }

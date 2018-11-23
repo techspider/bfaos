@@ -32,6 +32,7 @@
             this.activityList = new System.Windows.Forms.Panel();
             this.mainLogo = new System.Windows.Forms.PictureBox();
             this.viewDevInfoBtn = new BFAOSTool.UIControls.MenuItemWa();
+            this.networkSettingsBtn = new BFAOSTool.UIControls.MenuItemWa();
             this.activityList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainLogo)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +55,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.activityList.AutoScroll = true;
             this.activityList.Controls.Add(this.viewDevInfoBtn);
+            this.activityList.Controls.Add(this.networkSettingsBtn);
             this.activityList.Location = new System.Drawing.Point(336, 32);
             this.activityList.Name = "activityList";
             this.activityList.Size = new System.Drawing.Size(332, 492);
@@ -75,12 +77,25 @@
             this.viewDevInfoBtn.BtnText = "View Device Info";
             this.viewDevInfoBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.viewDevInfoBtn.Icon = global::BFAOSTool.Properties.Resources.baseline_info_white_36dp;
-            this.viewDevInfoBtn.Location = new System.Drawing.Point(0, 0);
+            this.viewDevInfoBtn.Location = new System.Drawing.Point(0, 36);
             this.viewDevInfoBtn.Name = "viewDevInfoBtn";
             this.viewDevInfoBtn.Size = new System.Drawing.Size(332, 36);
             this.viewDevInfoBtn.TabIndex = 0;
             this.viewDevInfoBtn.Click += new System.EventHandler(this.viewDevInfoBtn_Click);
             this.viewDevInfoBtn.Load += new System.EventHandler(this.viewDevInfoBtn_Load);
+            // 
+            // networkSettingsBtn
+            // 
+            this.networkSettingsBtn.BackColor = System.Drawing.Color.Transparent;
+            this.networkSettingsBtn.BtnText = "Network Settings";
+            this.networkSettingsBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.networkSettingsBtn.Icon = global::BFAOSTool.Properties.Resources.baseline_network_wifi_white_36dp;
+            this.networkSettingsBtn.Location = new System.Drawing.Point(0, 0);
+            this.networkSettingsBtn.Name = "networkSettingsBtn";
+            this.networkSettingsBtn.Size = new System.Drawing.Size(332, 36);
+            this.networkSettingsBtn.TabIndex = 1;
+            this.networkSettingsBtn.Click += new System.EventHandler(this.networkSettingsBtn_Click);
+            this.networkSettingsBtn.Load += new System.EventHandler(this.networkSettingsBtn_Load);
             // 
             // MainCP
             // 
@@ -106,5 +121,6 @@
         private System.Windows.Forms.Label cdriveLabel;
         private System.Windows.Forms.Panel activityList;
         private UIControls.MenuItemWa viewDevInfoBtn;
+        private UIControls.MenuItemWa networkSettingsBtn;
     }
 }
