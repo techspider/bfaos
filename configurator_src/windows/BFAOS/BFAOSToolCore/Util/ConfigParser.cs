@@ -5,6 +5,7 @@ Copyright (C) mr_chainman (techspider) 2018.
 https://github.com/techspider/bfaos
 */
 
+using BFAOSToolCore.FlashAir;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +18,7 @@ namespace BFAOSToolCore.Util
     {
         /// <summary>
         /// Parse the config file of a FlashAir SD card
+        /// WLANSD section not supported as of now
         /// </summary>
         /// <param name="path">The path of the config file</param>
         /// <returns>An object representing the configuration file</returns>
@@ -25,6 +27,12 @@ namespace BFAOSToolCore.Util
             Dictionary<string, string> kvp = new Dictionary<string, string>();
             if (!File.Exists(path))
                 throw new FileNotFoundException();
+
+            foreach(var line in File.ReadAllLines(path))
+            {
+                if (line.Trim() == "") continue;
+            }
+
             return new FlashAirConfig { };
         }
     }
