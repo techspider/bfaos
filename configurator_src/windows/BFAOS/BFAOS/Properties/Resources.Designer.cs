@@ -83,6 +83,16 @@ namespace BFAOSTool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baseline_info_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_info_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap baseline_info_white_36dp {
             get {
                 object obj = ResourceManager.GetObject("baseline_info_white_36dp", resourceCulture);
@@ -93,9 +103,39 @@ namespace BFAOSTool.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baseline_network_wifi_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_network_wifi_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap baseline_network_wifi_white_36dp {
             get {
                 object obj = ResourceManager.GetObject("baseline_network_wifi_white_36dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_security_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_security_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap baseline_star_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_star_white_24dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

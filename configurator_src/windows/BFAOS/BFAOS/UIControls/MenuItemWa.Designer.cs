@@ -57,7 +57,7 @@
             this.iconBox.Location = new System.Drawing.Point(0, 0);
             this.iconBox.Name = "iconBox";
             this.iconBox.Size = new System.Drawing.Size(36, 36);
-            this.iconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.iconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconBox.TabIndex = 0;
             this.iconBox.TabStop = false;
             // 

@@ -65,6 +65,18 @@
     <Compile Include="ContentPanels\NetworkSettingsCP.Designer.cs">
       <DependentUpon>NetworkSettingsCP.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContentPanels\SecurityCP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContentPanels\SecurityCP.Designer.cs">
+      <DependentUpon>SecurityCP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPanels\ServicesCP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContentPanels\ServicesCP.Designer.cs">
+      <DependentUpon>ServicesCP.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeviceBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ContentPanels\NetworkSettingsCP.resx">
       <DependentUpon>NetworkSettingsCP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPanels\SecurityCP.resx">
+      <DependentUpon>SecurityCP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPanels\ServicesCP.resx">
+      <DependentUpon>ServicesCP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeviceBrowser.resx">
       <DependentUpon>DeviceBrowser.cs</DependentUpon>
@@ -126,6 +144,10 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="BFAOS-App-Icon.ico" />
+    <None Include="Resources\baseline_star_white_24dp.png" />
+    <None Include="Resources\baseline_info_white_24dp.png" />
+    <None Include="Resources\baseline_network_wifi_white_24dp.png" />
+    <None Include="Resources\baseline_security_white_24dp.png" />
     <None Include="Resources\baseline_network_wifi_white_36dp.png" />
     <None Include="Resources\baseline_arrow_back_white_24dp.png" />
     <None Include="Resources\baseline_arrow_back_white_36dp.png" />

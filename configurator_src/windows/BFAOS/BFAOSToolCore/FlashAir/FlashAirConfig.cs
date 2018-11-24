@@ -62,11 +62,12 @@ namespace BFAOSToolCore.FlashAir
             appendCfg("VENDOR", Vendor);
             appendCfg("APPNAME", Hostname);
             appendCfg("TIMEZONE", Timezone);
+            appendCfg("WEBDAV", Util.Convert.BoolToInt(WebDav));
             appendCfg("APPAUTOTIME", AppAutotime);
             //TODO add disabledcgi support => if(DisabledCGIs != null)
-            appendCfg("HTTPDMODE", AuthMode);
             if(AuthCredentials != null)
             {
+                appendCfg("HTTPDMODE", AuthMode);
                 appendCfg("HTTPDUSER", AuthCredentials.Username);
                 appendCfg("HTTPDPASS", AuthCredentials.Password);
             }
