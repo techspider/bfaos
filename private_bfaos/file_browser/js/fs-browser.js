@@ -213,6 +213,36 @@ function getFileIcon(fname)
     }
 }
 
+function openFile(SEP, fname)
+{
+    var e = fname.split('.');
+    if(e.length <= 1)
+    {
+        window.location = `${currentPath}${SEP}${fname}`;
+        return;
+    }
+    var ext = e[e.length - 1].toLowerCase();
+    switch(ext)
+    {
+        case "js":
+            var url = `/private_bfaos/code_viewer/index.html?filepath=${currentPath}${SEP}${fname}&language=javascript`;
+            window.open(url, "", "width=720,height=576");
+            break;
+        case "html":
+            url = `/private_bfaos/code_viewer/index.html?filepath=${currentPath}${SEP}${fname}&language=html`;
+            window.open(url, "", "width=720,height=576");
+            break;
+        case "txt":
+            url = `/private_bfaos/code_viewer/index.html?filepath=${currentPath}${SEP}${fname}&language=text`;
+            window.open(url, "", "width=720,height=576");
+            break;
+        case "css":
+            url = `/private_bfaos/code_viewer/index.html?filepath=${currentPath}${SEP}${fname}&language=css`;
+            window.open(url, "", "width=720,height=576");
+            break;
+    }
+}
+
 function loadFiles()
 {
     var SEP = "/";
@@ -252,6 +282,12 @@ function loadFiles()
                     fs_item.setAttribute("id", uid);
                     e.preventDefault();
                     contextMenu.setpos(e.pageX, e.pageY);
+                    contextMenu.items.add("View", ()=>{
+                        openFile(SEP, e.srcElement.innerText);
+                    });
+                    contextMenu.items.add("Download", ()=>{
+                        window.location = `${currentPath}${SEP}${e.srcElement.innerText}`;
+                    });
                     contextMenu.items.add("Rename", ()=>{
                         new UIDialog.RenameDialog().show(e.srcElement.innerText);
                     });
