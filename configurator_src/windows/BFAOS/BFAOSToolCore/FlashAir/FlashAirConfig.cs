@@ -72,7 +72,19 @@ namespace BFAOSToolCore.FlashAir
             }
             if (WLANAPMode != -1)
                 appendCfg("WLANAPMODE", WLANAPMode);
+            var attributes = File.GetAttributes(path);
+            if ((attributes & FileAttributes.Hidden) == FileAttributes.Hidden)
+            {
+                attributes &= ~FileAttributes.Hidden;
+                File.SetAttributes(path, attributes);
+            }
+            if((attributes & FileAttributes.System) == FileAttributes.System)
+            {
+                attributes &= ~FileAttributes.System;
+                File.SetAttributes(path, attributes);
+            }
             File.WriteAllText(path, config);
+            System.IO.File.SetAttributes(path, FileAttributes.Hidden & FileAttributes.System);
         }
     }
 }

@@ -33,6 +33,15 @@ namespace BFAOSTool.ContentPanels
 
         private void button1_Click(object sender, EventArgs e)
         {
+            BFAOSInstance.DriveConfig.AppMode = 4;
+            if(ipsCheck.Checked)
+            {
+                BFAOSInstance.DriveConfig.AppMode = 6;
+                BFAOSInstance.DriveConfig.BridgeNetCreds = new BFAOSToolCore.FlashAir.NetCredentials(ips_ssid.Text, ips_passwd.Text);
+            }
+            BFAOSInstance.DriveConfig.Hostname = hostnameInput.Text;
+            BFAOSInstance.DriveConfig.DNSMode = BFAOSToolCore.Util.Convert.BoolToInt(dnsRedirCheck.Checked);
+            BFAOSInstance.DriveConfig.FlashAirNetCreds = new BFAOSToolCore.FlashAir.NetCredentials(ssidInput.Text, keyInput.Text);
             BFAOSInstance.DriveConfig.Save(BFAOSInstance.Drive + "\\SD_WLAN\\CONFIG");
             BFAOSInstance.MUI_Instance.ShowContentPanel<MainCP>();
         }
@@ -40,6 +49,11 @@ namespace BFAOSTool.ContentPanels
         private void ipsCheck_CheckedChanged(object sender, EventArgs e)
         {
             ipsGrp.Enabled = ipsCheck.Checked;
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            BFAOSInstance.MUI_Instance.ShowContentPanel<MainCP>();
         }
     }
 }
