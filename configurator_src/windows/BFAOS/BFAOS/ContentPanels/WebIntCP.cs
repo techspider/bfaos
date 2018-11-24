@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace BFAOSTool.ContentPanels
 {
@@ -53,6 +54,18 @@ namespace BFAOSTool.ContentPanels
                     themeList.Items.Remove(themeList.SelectedItem);
                     MessageBox.Show("Theme deleted.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
+        }
+
+        private void addThemeBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(BFAOSInstance.Drive + "\\private_bfaos\\file_browser\\themes");
+            }
+            catch (Exception)
+            {
+                
             }
         }
     }

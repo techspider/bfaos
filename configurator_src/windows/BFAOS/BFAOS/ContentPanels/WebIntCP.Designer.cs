@@ -141,6 +141,7 @@
             this.addThemeBtn.TabIndex = 5;
             this.addThemeBtn.Text = "Add";
             this.addThemeBtn.UseVisualStyleBackColor = true;
+            this.addThemeBtn.Click += new System.EventHandler(this.addThemeBtn_Click);
             // 
             // removeBtn
             // 
