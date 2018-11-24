@@ -23,6 +23,12 @@ var currentPath = window.location.pathname;
 var listViewMode = "list";
 var currentTheme = "default";
 
+if(config != null)
+{
+    listViewMode = config.file_browser.view;
+    currentTheme = config.file_browser.theme.name;
+}
+
 //check for settings
 if(localStorage.getItem("bfaos_settings") != null)
 {
