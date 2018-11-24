@@ -60,5 +60,10 @@ namespace BFAOSTool.ContentPanels
         {
             BFAOSInstance.MUI_Instance.ShowContentPanel<ServicesCP>();
         }
+
+        private void webIntBtn_Click(object sender, EventArgs e)
+        {
+            BFAOSInstance.MUI_Instance.ShowContentPanel<WebIntCP>();
+        }
     }
 }

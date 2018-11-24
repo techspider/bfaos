@@ -30,8 +30,9 @@
         {
             this.cdriveLabel = new System.Windows.Forms.Label();
             this.activityList = new System.Windows.Forms.Panel();
-            this.servicesBtn = new BFAOSTool.UIControls.MenuItemWa();
+            this.webIntBtn = new BFAOSTool.UIControls.MenuItemWa();
             this.viewDevInfoBtn = new BFAOSTool.UIControls.MenuItemWa();
+            this.servicesBtn = new BFAOSTool.UIControls.MenuItemWa();
             this.securitySettingsBtn = new BFAOSTool.UIControls.MenuItemWa();
             this.networkSettingsBtn = new BFAOSTool.UIControls.MenuItemWa();
             this.mainLogo = new System.Windows.Forms.PictureBox();
@@ -56,6 +57,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.activityList.AutoScroll = true;
+            this.activityList.Controls.Add(this.webIntBtn);
             this.activityList.Controls.Add(this.viewDevInfoBtn);
             this.activityList.Controls.Add(this.servicesBtn);
             this.activityList.Controls.Add(this.securitySettingsBtn);
@@ -65,18 +67,17 @@
             this.activityList.Size = new System.Drawing.Size(332, 492);
             this.activityList.TabIndex = 2;
             // 
-            // servicesBtn
+            // webIntBtn
             // 
-            this.servicesBtn.BackColor = System.Drawing.Color.Transparent;
-            this.servicesBtn.BtnText = "Services";
-            this.servicesBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.servicesBtn.Icon = global::BFAOSTool.Properties.Resources.baseline_star_white_24dp;
-            this.servicesBtn.Location = new System.Drawing.Point(0, 72);
-            this.servicesBtn.Name = "servicesBtn";
-            this.servicesBtn.Size = new System.Drawing.Size(332, 36);
-            this.servicesBtn.TabIndex = 3;
-            this.servicesBtn.Click += new System.EventHandler(this.servicesBtn_Click);
-            this.servicesBtn.Load += new System.EventHandler(this.servicesBtn_Load);
+            this.webIntBtn.BackColor = System.Drawing.Color.Transparent;
+            this.webIntBtn.BtnText = "Web Interface Settings";
+            this.webIntBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.webIntBtn.Icon = global::BFAOSTool.Properties.Resources.baseline_web_white_24dp;
+            this.webIntBtn.Location = new System.Drawing.Point(0, 144);
+            this.webIntBtn.Name = "webIntBtn";
+            this.webIntBtn.Size = new System.Drawing.Size(332, 36);
+            this.webIntBtn.TabIndex = 4;
+            this.webIntBtn.Click += new System.EventHandler(this.webIntBtn_Click);
             // 
             // viewDevInfoBtn
             // 
@@ -90,6 +91,19 @@
             this.viewDevInfoBtn.TabIndex = 0;
             this.viewDevInfoBtn.Click += new System.EventHandler(this.viewDevInfoBtn_Click);
             this.viewDevInfoBtn.Load += new System.EventHandler(this.viewDevInfoBtn_Load);
+            // 
+            // servicesBtn
+            // 
+            this.servicesBtn.BackColor = System.Drawing.Color.Transparent;
+            this.servicesBtn.BtnText = "Services";
+            this.servicesBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.servicesBtn.Icon = global::BFAOSTool.Properties.Resources.baseline_star_white_24dp;
+            this.servicesBtn.Location = new System.Drawing.Point(0, 72);
+            this.servicesBtn.Name = "servicesBtn";
+            this.servicesBtn.Size = new System.Drawing.Size(332, 36);
+            this.servicesBtn.TabIndex = 3;
+            this.servicesBtn.Click += new System.EventHandler(this.servicesBtn_Click);
+            this.servicesBtn.Load += new System.EventHandler(this.servicesBtn_Load);
             // 
             // securitySettingsBtn
             // 
@@ -154,5 +168,6 @@
         private UIControls.MenuItemWa networkSettingsBtn;
         private UIControls.MenuItemWa securitySettingsBtn;
         private UIControls.MenuItemWa servicesBtn;
+        private UIControls.MenuItemWa webIntBtn;
     }
 }
