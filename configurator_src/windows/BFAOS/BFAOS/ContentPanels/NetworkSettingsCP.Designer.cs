@@ -215,6 +215,7 @@
             this.keyInput.Name = "keyInput";
             this.keyInput.Size = new System.Drawing.Size(230, 25);
             this.keyInput.TabIndex = 3;
+            this.keyInput.TextChanged += new System.EventHandler(this.keyInput_TextChanged);
             // 
             // keyLabel
             // 

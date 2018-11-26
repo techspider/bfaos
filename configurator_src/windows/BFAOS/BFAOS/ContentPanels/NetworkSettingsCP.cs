@@ -33,6 +33,10 @@ namespace BFAOSTool.ContentPanels
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if((keyInput.Text.Trim()) == "" && (hostnameInput.Text.Trim() == ""))
+            {
+                return;
+            }
             BFAOSInstance.DriveConfig.AppMode = 4;
             if(ipsCheck.Checked)
             {
@@ -54,6 +58,11 @@ namespace BFAOSTool.ContentPanels
         private void backButton_Click(object sender, EventArgs e)
         {
             BFAOSInstance.MUI_Instance.ShowContentPanel<MainCP>();
+        }
+
+        private void keyInput_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
