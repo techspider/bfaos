@@ -90,7 +90,6 @@
             this.viewDevInfoBtn.Size = new System.Drawing.Size(332, 36);
             this.viewDevInfoBtn.TabIndex = 0;
             this.viewDevInfoBtn.Click += new System.EventHandler(this.viewDevInfoBtn_Click);
-            this.viewDevInfoBtn.Load += new System.EventHandler(this.viewDevInfoBtn_Load);
             // 
             // servicesBtn
             // 
@@ -103,7 +102,6 @@
             this.servicesBtn.Size = new System.Drawing.Size(332, 36);
             this.servicesBtn.TabIndex = 3;
             this.servicesBtn.Click += new System.EventHandler(this.servicesBtn_Click);
-            this.servicesBtn.Load += new System.EventHandler(this.servicesBtn_Load);
             // 
             // securitySettingsBtn
             // 
@@ -116,7 +114,6 @@
             this.securitySettingsBtn.Size = new System.Drawing.Size(332, 36);
             this.securitySettingsBtn.TabIndex = 2;
             this.securitySettingsBtn.Click += new System.EventHandler(this.securitySettingsBtn_Click);
-            this.securitySettingsBtn.Load += new System.EventHandler(this.menuItemWa1_Load);
             // 
             // networkSettingsBtn
             // 
@@ -129,7 +126,6 @@
             this.networkSettingsBtn.Size = new System.Drawing.Size(332, 36);
             this.networkSettingsBtn.TabIndex = 1;
             this.networkSettingsBtn.Click += new System.EventHandler(this.networkSettingsBtn_Click);
-            this.networkSettingsBtn.Load += new System.EventHandler(this.networkSettingsBtn_Load);
             // 
             // mainLogo
             // 

@@ -21,19 +21,9 @@ namespace BFAOSTool.ContentPanels
             cdriveLabel.Text = cdriveLabel.Text.Replace("${drive}", BFAOSInstance.Drive);
         }
 
-        private void viewDevInfoBtn_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void viewDevInfoBtn_Click(object sender, EventArgs e)
         {
             BFAOSInstance.MUI_Instance.ShowContentPanel<DevInfoCP>();
-        }
-
-        private void networkSettingsBtn_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void networkSettingsBtn_Click(object sender, EventArgs e)
@@ -41,19 +31,9 @@ namespace BFAOSTool.ContentPanels
             BFAOSInstance.MUI_Instance.ShowContentPanel<NetworkSettingsCP>();
         }
 
-        private void menuItemWa1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void securitySettingsBtn_Click(object sender, EventArgs e)
         {
             BFAOSInstance.MUI_Instance.ShowContentPanel<SecurityCP>();
-        }
-
-        private void servicesBtn_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void servicesBtn_Click(object sender, EventArgs e)
