@@ -49,6 +49,13 @@ namespace BFAOSTool.ContentPanels
                 BFAOSInstance.DriveConfig.Save(BFAOSInstance.Drive + "\\SD_WLAN\\CONFIG");
                 BFAOSInstance.MUI_Instance.ShowContentPanel<MainCP>();
             }
+            else
+            {
+                BFAOSInstance.DriveConfig.AuthMode = 0;
+                BFAOSInstance.DriveConfig.AuthCredentials = null;
+                BFAOSInstance.DriveConfig.Save(BFAOSInstance.Drive + "\\SD_WLAN\\CONFIG");
+                BFAOSInstance.MUI_Instance.ShowContentPanel<MainCP>();
+            }
         }
     }
 }
