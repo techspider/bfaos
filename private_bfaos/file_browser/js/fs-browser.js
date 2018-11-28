@@ -121,7 +121,11 @@ function loadDirs()
                 var fs_name = document.createElement("td");
                 var fs_type = document.createElement("td");
                 if(currentPath == "/") SEP = "";
-                fs_name.innerHTML = `<img src="${getFolderIcon(dir.fname)}"><a href="${currentPath}${SEP}${dir.fname}">${dir.fname}</a>`;
+                var fi = getFolderIcon(dir.fname);
+                if(currentPath + dir.fname == "/private_bfaos")
+                    fi = `/private_bfaos/file_browser/themes/${currentTheme}/file-icons/folder-sys.png`;
+                fs_name.innerHTML = `<img src="${fi}"><a href="${currentPath}${SEP}${dir.fname}">${dir.fname}</a>`;
+                
                 fs_type.innerText = "File Folder";
                 fs_item.appendChild(fs_name);
                 fs_item.appendChild(fs_type);
