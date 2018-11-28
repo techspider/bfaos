@@ -10,10 +10,11 @@ https://github.com/techspider/bfaos
  * @param {string} theme The theme name
  * @param {string} lvmode The list view mode
  */
-function BFAOS_Settings(theme, lvmode)
+function BFAOS_Settings(theme, lvmode, hideSysContent)
 {
     this.theme = (theme != null) ? theme : "default";
     this.lvmode = (lvmode != null) ? lvmode : "list";
+    this.sysContentHidden = (hideSysContent != null) ? hideSysContent : true;
 }
 
 if(wlansd == null)
@@ -22,11 +23,13 @@ if(wlansd == null)
 var currentPath = window.location.pathname;
 var listViewMode = "list";
 var currentTheme = "default";
+var hideSystemContent = true;
 
 if(config != null)
 {
     listViewMode = config.file_browser.view;
     currentTheme = config.file_browser.theme.name;
+    hideSystemContent = config.file_browser.hideSystemContent;
 }
 
 //check for settings
@@ -36,6 +39,7 @@ if(localStorage.getItem("bfaos_settings") != null)
     var settings = JSON.parse(localStorage.getItem("bfaos_settings"));
     currentTheme = settings.theme;
     listViewMode = settings.lvmode;
+    hideSystemContent = settings.sysContentHidden;
 }
 
 if(currentPath != "/")
@@ -122,9 +126,15 @@ function loadDirs()
                 var fs_type = document.createElement("td");
                 if(currentPath == "/") SEP = "";
                 var fi = getFolderIcon(dir.fname);
+                var fp = `${currentPath}${SEP}${dir.fname}`;
                 if(currentPath + dir.fname == "/private_bfaos")
+                {
+                    if(hideSystemContent)
+                        continue; //Ignore private_bfaos
                     fi = `/private_bfaos/file_browser/themes/${currentTheme}/file-icons/folder-sys.png`;
-                fs_name.innerHTML = `<img src="${fi}"><a href="${currentPath}${SEP}${dir.fname}">${dir.fname}</a>`;
+                    fp = `/private_bfaos/dialogs/sys_warning.html?redir=${fp}&prev=${currentPath}`;
+                }
+                fs_name.innerHTML = `<img src="${fi}"><a href="${fp}">${dir.fname}</a>`;
                 
                 fs_type.innerText = "File Folder";
                 fs_item.appendChild(fs_name);

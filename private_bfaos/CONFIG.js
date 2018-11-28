@@ -10,6 +10,7 @@ config = {
 		theme: {
 			name: "default"
 		},
-		view: "list"
+		view: "list",
+		hideSystemContent: true
 	}
 }
