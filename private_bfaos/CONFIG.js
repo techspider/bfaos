@@ -11,6 +11,7 @@ config = {
 			name: "default"
 		},
 		view: "list",
-		hideSystemContent: true
+		hideSystemContent: true,
+		showHiddenFiles: true
 	}
 }

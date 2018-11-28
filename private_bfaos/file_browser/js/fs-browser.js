@@ -10,11 +10,12 @@ https://github.com/techspider/bfaos
  * @param {string} theme The theme name
  * @param {string} lvmode The list view mode
  */
-function BFAOS_Settings(theme, lvmode, hideSysContent)
+function BFAOS_Settings(theme, lvmode, hideSysContent, showHiddenFiles)
 {
     this.theme = (theme != null) ? theme : "default";
     this.lvmode = (lvmode != null) ? lvmode : "list";
     this.sysContentHidden = (hideSysContent != null) ? hideSysContent : true;
+    this.showHiddenFiles = (showHiddenFiles != null) ? showHiddenFiles : false;
 }
 
 if(wlansd == null)
@@ -24,12 +25,14 @@ var currentPath = window.location.pathname;
 var listViewMode = "list";
 var currentTheme = "default";
 var hideSystemContent = true;
+var showHiddenFiles = false;
 
 if(config != null)
 {
     listViewMode = config.file_browser.view;
     currentTheme = config.file_browser.theme.name;
     hideSystemContent = config.file_browser.hideSystemContent;
+    showHiddenFiles = config.file_browser.showHiddenFiles;
 }
 
 //check for settings
@@ -134,6 +137,9 @@ function loadDirs()
                     fi = `/private_bfaos/file_browser/themes/${currentTheme}/file-icons/folder-sys.png`;
                     fp = `/private_bfaos/dialogs/sys_warning.html?redir=${fp}&prev=${currentPath}`;
                 }
+                if(dir.fname.startsWith("."))
+                    if(!showHiddenFiles)
+                        continue; //Ignore hidden files
                 fs_name.innerHTML = `<img src="${fi}"><a href="${fp}">${dir.fname}</a>`;
                 
                 fs_type.innerText = "File Folder";
