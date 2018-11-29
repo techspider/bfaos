@@ -13,5 +13,8 @@ config = {
 		view: "list",
 		hideSystemContent: true,
 		showHiddenFiles: true
+	},
+	preinit: {
+		nav_index: true
 	}
 }
